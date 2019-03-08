@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Web Design & Development Portfolio",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TracySpitler/portfolio.git"
+  },
+  "author": "TSpitler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TracySpitler/portfolio/issues"
+  },
+  "homepage": "https://github.com/TracySpitler/portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
