@@ -1,0 +1,300 @@
+/******************* custom css *******************/
+
+:root {
+  --pearl: #ebeffe;
+  --dk-blue: #001726;
+  --lt-blue: #38b6ff;
+  --purple: #838ed9;
+  --pink: #c13074;
+  --main: #838ed9;
+}
+
+@font-face {
+  font-family: 'GlacialIndifference-Regular';
+  src: url('/fonts/GlacialIndifference-Regular.woff') format('woff');
+}
+
+/******************* main sections *******************/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: GlacialIndifference-Regular;
+  background-color: #f8fcfd;
+  color: var(--pearl);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+}
+
+/******************* elements *******************/
+
+h1 {
+  text-transform: uppercase;
+  font-size: 11vw;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 33px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 3vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--pearl);
+}
+
+a img {
+  width: 1.7rem;
+}
+
+b {
+  display: none;
+}
+
+i {
+  margin: 0 .3rem;
+  transition: transform .7s ease-in-out;
+}
+
+button {
+  border: 1px solid var(--main);
+  outline: 0;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: var(--pearl);
+  transition: background-color .7s ease-in-out;
+}
+
+/******************* main pages *******************/
+
+#home {
+  background-image: linear-gradient(to left, rgba(0, 23, 38, .7), rgba(0, 23, 38, 1)), url("/images/polyhedron.jpg");
+  background-size: 151% auto;
+}
+
+#about {
+  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("/images/polyhedra-blue.jpg");
+  background-size: 133% auto;
+}
+
+#projects {
+  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("/images/polyhedra-pink.jpg");
+  background-size: 133% auto;
+}
+
+#contact {
+  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("/images/rainbow.jpg");
+  background-position: center;
+  background-size: 200% auto;
+}
+
+/******************* active *******************/
+
+a.active img {
+  display: none;
+  transition: all .7s ease-in-out;
+}
+
+a.active b {
+  display: block;
+  transition: all .7s ease-in-out;
+  color: var(--main);
+  transform: scale(1.3);
+  border-bottom: 1.5px solid var(--pearl);
+  line-height: 1.3rem;
+}
+
+/******************* hover action *******************/
+
+button:hover {
+  border: 1px solid var(--main);
+  background-color: var(--main);
+}
+
+.side-brand:hover img {
+  opacity: 0;
+  transform: scale(.3);
+  transform: rotate(300deg);
+  transition: all .7s ease-in-out;
+}
+
+.hero-brand:hover img {
+  opacity: 0;
+  transform: rotate(600deg);
+  transition: all .7s ease-in-out;
+}
+
+.side-brand:hover h2, #ohno:hover {
+  font-size: 2.7rem;
+  opacity: 1;
+  transition: all .7s ease-in-out;
+}
+
+i:hover {
+  transform: scale(1.7);
+  color: var(--main);
+}
+
+.side-nav a:hover img {
+  display: none;
+  transition: display .5s ease-in-out;
+}
+
+.side-nav a:hover b {
+  display: block;
+  transition: display .5s ease-in-out;
+}
+
+.side-nav a:hover {
+  color: var(--main);
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+/******************* side navigation *******************/
+
+.side-links {
+  color: var(--pearl);
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-size: .7rem;
+}
+
+.side-links span {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-social {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-nav a {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .7s ease-in-out;
+}
+
+.side-nav {
+  text-align: center;
+  max-width: 6rem;
+  width: 20vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  border-right: 1px solid var(--main);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-brand {
+  margin: 0;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  background-color: rgba(0, 0, 0, 0);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pearl);
+  border-bottom: 1px solid var(--main);
+  position: relative;
+}
+
+.side-brand img, .hero-brand img {
+  padding-top: 1rem;
+  width: 80%;
+  opacity: 1;
+  transition: all .7s ease-in-out;
+  position: absolute;
+}
+
+.side-brand h2, #ohno {
+  margin: 0;
+  opacity: 0;
+  font-size: 0;
+  transition: all .7s ease-in-out;
+  position: absolute;
+}
+
+/******************* 404 page *******************/
+
+#fourohfour {
+  background-image: url("/images/fractal.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#fourohfour img {
+  width: 40vw;
+}
+
+#fourohfour .hero-brand {
+  top: 15%;
+  left: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#fourohfour .hero {
+  background-color: rgba(0, 23, 38, .8);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-text {
+  margin: 0;
+  padding: 0;
+  line-height: 9vw;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/******************* responsive *******************/
+
+@media only screen and (max-width: 700px) {
+  #home {
+    background-position: center;
+    background-size: cover;
+  }
+  #projects, #about {
+    background-size: 175% auto;
+  }
+  #contact {
+    background-size: 250% auto;
+  }
+}
