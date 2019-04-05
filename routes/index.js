@@ -52,9 +52,29 @@ router.post('/contact', (req, res) => {
       console.log(err);
     }
     else {
-      res.render('thankyou');
+      res.redirect('/');
     }
   });
+  // function(user, done) {
+  //     var smtpTransport = nodemailer.createTransport({
+  //       service: 'Gmail',
+  //       auth: {
+  //         user: process.env.GMAIL_EMAIL,
+  //         pass: process.env.GMAIL_PASSWORD
+  //       }
+  //     });
+  //     var mailOptions = {
+  //       to: user.username,
+  //       from: process.env.GMAIL_EMAIL,
+  //       subject: 'Your password has been changed',
+  //       text: 'Hello,\n\n' +
+  //         'This is a confirmation that the password for your account ' + user.username + ' at SetList has just been changed.\n'
+  //     };
+  //     smtpTransport.sendMail(mailOptions, function(err) {
+  //       req.flash('success', 'Success! Your password has been changed and you are now logged in.');
+  //       done(err);
+  //     });
+  //   }
 });
 
 // set up router
