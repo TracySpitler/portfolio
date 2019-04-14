@@ -2,6 +2,11 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const bodyParser = require('body-parser');
+
+// middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 // set view engine
 app.set('view engine', 'ejs');
