@@ -477,7 +477,9 @@ hr {
   #contact {
     background-size: 250% auto;
   }
-
+  .side-nav {
+    height: 80vh;
+  }
   .container {
     padding: 0;
     margin-left: 5.7rem;
