@@ -117,22 +117,22 @@ span {
 /******************* main pages *******************/
 
 #home {
-  background-image: linear-gradient(to left, rgba(0, 23, 38, .7), rgba(0, 23, 38, 1)), url("/images/polyhedron.jpg");
+  background-image: linear-gradient(to left, rgba(0, 23, 38, .7), rgba(0, 23, 38, 1)), url("../images/polyhedron.jpg");
   background-size: 151% auto;
 }
 
 #about {
-  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("/images/polyhedra-blue.jpg");
+  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("../images/polyhedra-blue.jpg");
   background-size: 133% auto;
 }
 
 #projects {
-  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("/images/polyhedra-pink.jpg");
+  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("../images/polyhedra-pink.jpg");
   background-size: 133% auto;
 }
 
 #contact {
-  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("/images/rainbow.jpg");
+  background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("../images/rainbow.jpg");
   background-position: left;
   background-size: 133% auto;
 }
@@ -278,7 +278,7 @@ i:hover {
 /******************* 404 page *******************/
 
 #fourohfour {
-  background-image: url("/images/fractal.jpg");
+  background-image: url("../images/fractal.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
