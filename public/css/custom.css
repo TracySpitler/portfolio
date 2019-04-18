@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'GlacialIndifference-Regular';
-  src: url('/fonts/GlacialIndifference-Regular.woff') format('woff');
+  src: url('../fonts/GlacialIndifference-Regular.woff') format('woff');
 }
 
 /******************* main sections *******************/
@@ -30,6 +30,30 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 243px;
+}
+
+.splash {
+  text-align: left;
+  margin-left: 6rem;
+}
+
+.about {
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.contact {
+  margin: 0 auto;
 }
 
 /******************* elements *******************/
@@ -43,16 +67,19 @@ h1 {
 
 h2 {
   font-size: 33px;
+  text-transform: uppercase;
 }
 
 p {
-  font-size: 1.1rem;
-  line-height: 3vh;
+  line-height: 19.5px;
+  font-size: 16px;
+  padding-bottom: 1rem;
 }
 
 a {
   text-decoration: none;
   color: var(--pearl);
+  cursor: pointer;
 }
 
 a img {
@@ -68,7 +95,11 @@ i {
   transition: transform .7s ease-in-out;
 }
 
-button {
+span {
+  color: var(--purple);
+}
+
+.btn {
   border: 1px solid var(--main);
   outline: 0;
   display: inline-block;
@@ -80,6 +111,7 @@ button {
   font-size: .8rem;
   color: var(--pearl);
   transition: background-color .7s ease-in-out;
+  border-radius: 3px;
 }
 
 /******************* main pages *******************/
@@ -101,8 +133,8 @@ button {
 
 #contact {
   background-image: linear-gradient(to left, rgba(0, 23, 38, .6), rgba(0, 23, 38, 1)), url("/images/rainbow.jpg");
-  background-position: center;
-  background-size: 200% auto;
+  background-position: left;
+  background-size: 133% auto;
 }
 
 /******************* active *******************/
@@ -123,7 +155,7 @@ a.active b {
 
 /******************* hover action *******************/
 
-button:hover {
+.btn:hover {
   border: 1px solid var(--main);
   background-color: var(--main);
 }
@@ -202,9 +234,10 @@ i:hover {
 
 .side-nav {
   text-align: center;
-  max-width: 6rem;
-  width: 20vw;
+  width: 6rem;
+  min-width: 5rem;
   height: 100vh;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0);
   border-right: 1px solid var(--main);
   display: flex;
@@ -273,15 +306,162 @@ i:hover {
   justify-content: center;
 }
 
+/******************* contact *******************/
+
+form {
+  margin-left: .3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: linear-gradient(to bottom, rgba(235, 239, 254, .1), rgba(235, 239, 254, 0));
+  padding: .5rem 1.2rem;
+}
+
+input:not([type="submit"]), textarea {
+  border: 0;
+  outline:0;
+  border-bottom: 1px solid rgba(235, 239, 254, .1);
+  padding: .6rem;
+  display: block;
+  width: 90%;
+  box-shadow: 0 1px 1px rgba(black, 0.1);
+  border-radius: 1px;
+  font-family: GlacialIndifference-Regular;
+  line-height: 19.5px;
+  font-size: 16px;
+  margin: .6rem 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--pearl);
+}
+
+textarea {
+  min-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+input:not([type="submit"]):focus, textarea:focus {
+  transition: all .7s ease-in-out;
+  border-bottom: 1px solid var(--purple);
+}
+
+input[type="submit"] {
+  margin: 1.5rem 1rem;
+}
+
+.contact-social {
+  align-self: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-social i {
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+hr {
+  width: 100%;
+  border: .5px solid var(--pearl);
+  margin: 1.5rem 0;
+}
+
+/******************* projects *******************/
+
 .hero-text {
-  margin: 0;
-  padding: 0;
-  line-height: 9vw;
-  text-align: left;
+  margin-left: 6rem;
+}
+
+.card-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: 6rem;
+}
+
+.cards{
+  padding: 1rem .3rem;
+  float: left;
+  width: 47%;
+}
+
+.cards h3 {
+  border-bottom: 1px solid var(--pearl);
+  margin-bottom: 1rem;
+  padding: .5rem 0;
+  text-transform: uppercase;
+}
+
+.cards .title{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(131, 142, 217, 1);
   position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out 0s;
+  transition: opacity 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
   top: 50%;
   left: 50%;
+  opacity: 0;
   transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3 {
+  color: var(--pearl);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p {
+  color: var(--pearl);
+  font-size: 0.8rem;
+  padding: 0 .5rem;
+}
+
+.fadeIn-bottom{
+  top: 80%;
 }
 
 /******************* responsive *******************/
@@ -296,5 +476,40 @@ i:hover {
   }
   #contact {
     background-size: 250% auto;
+  }
+
+  .container {
+    padding: 0;
+    margin-left: 5.7rem;
+  }
+  .splash {
+    padding-left: 1.3rem;
+    min-width: 200px;
+  }
+  .about p, .contact p, .projects p {
+    padding: 0 1.3rem 0 1.7rem;
+  }
+
+  .about, .contact, .projects .hero-text {
+    margin: 0;
+  }
+
+  .cards {
+    padding: 0 auto;
+    width: 70vw;
+  }
+
+  .card-group {
+    margin: 0;
+  }
+
+  .extra {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .cards {
+    width: 30%;
   }
 }
