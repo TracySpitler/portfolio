@@ -59,8 +59,10 @@
             </div>
             <hr>
             <input type="text" name="contactName" placeholder="Your name">
-            <input  type="email" name="contactEmail" placeholder="Email" required>
-            <textarea id="contact-message" type="text" name="contactMessage" placeholder="The message"></textarea>
+            <input  type="text" name="_replyto" placeholder="Your email" required>
+            <textarea id="contact-message" type="text" name="message" placeholder="The message"></textarea>
+            <input type="hidden" name="_subject" value="New contact from your portfolio!" />
+            <input type="text" name="_gotcha" style="display:none"/>
             <input type="hidden" name="_next" value="thankyou.html"/>
             <a><input type="submit" value="Send" class="btn"/></a>
           </form>
