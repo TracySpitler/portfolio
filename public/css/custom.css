@@ -160,20 +160,20 @@ a.active b {
   background-color: var(--main);
 }
 
-.side-brand:hover img {
+.side-brand:hover img, .side-brand:focus img, .side-brand:active img {
   opacity: 0;
   transform: scale(.3);
   transform: rotate(300deg);
   transition: all .7s ease-in-out;
 }
 
-.hero-brand:hover img {
+.hero-brand:hover img, .hero-brand:focus img, .hero-brand:active img {
   opacity: 0;
   transform: rotate(600deg);
   transition: all .7s ease-in-out;
 }
 
-.side-brand:hover h2, #ohno:hover {
+.side-brand:hover h2, .side-brand:focus h2, .side-brand:active h2 {
   font-size: 2.7rem;
   opacity: 1;
   transition: all .7s ease-in-out;
